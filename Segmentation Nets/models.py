@@ -313,5 +313,5 @@ class ThreeDAttentionResUNet(nn.Module):
 
         # Final layer
         out = self.final(d1)
-        return out
+        return torch.sigmoid(out)
 
