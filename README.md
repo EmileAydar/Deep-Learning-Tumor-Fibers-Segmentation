@@ -1,7 +1,9 @@
 # Deep-Learning-Tumor-Fibers-Segmentation
 
-Project not Finished !!!
-Currently working on it, will update asap
+Project not Finished yet.
+Currently working on it, will update asap.
+Keep Calm.
+Stay Tuned.
 
 All the codes are written under PyTorch framework, and are designed for one or more GPUs acceleration.
 
