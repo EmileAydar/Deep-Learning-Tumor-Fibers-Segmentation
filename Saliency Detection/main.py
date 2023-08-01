@@ -90,7 +90,6 @@ class VGG(nn.Module):
         self.feature_maps = output.detach()
 
     # Backward hook to get the gradients
-    # Backward hook to get the gradients
     def backward_hook(self, module, grad_in, grad_out):
         self.gradients = grad_out[0].clone()
 
