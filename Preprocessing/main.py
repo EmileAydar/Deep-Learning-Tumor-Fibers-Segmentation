@@ -4,7 +4,6 @@ from temp import tf_batch_gather, tf_batch_histogram
 from itertools import product
 import tifffile
 import os
-import tifffile
 
 
 def mclahe(x, kernel_size=None, n_bins=256, clip_limit=0.0001, adaptive_hist_range=True, use_gpu=True):
