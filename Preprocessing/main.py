@@ -10,7 +10,10 @@ def mclahe(x, kernel_size=None, n_bins=256, clip_limit=0.0001, adaptive_hist_ran
     """
     Multidimensional contrast limited adaptive histogram equalization implemented in tensorflow.
 
-    Taken from Stimper.and al, adapted for TensorFlow v2 and improved for better memory management and synchrotron image processing.
+    Taken from Stimper.and al, adapted for TensorFlow v2 (the original code uses deprecated tensorflow methods and is not usable anymore in its original form)
+    and improved for better memory management and synchrotron image processing.
+
+    Adaptation for PyTorch Framework coming too..
 
     :param x: numpy array to which clahe is applied
     :param kernel_size: tuple of kernel sizes, 1/8 of dimension lengths of x if None
