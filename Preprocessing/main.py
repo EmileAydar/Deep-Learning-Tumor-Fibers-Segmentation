@@ -17,7 +17,7 @@ def mclahe(x, kernel_size=None, n_bins=256, clip_limit=0.0001, adaptive_hist_ran
     Adaptation for PyTorch Framework coming too..
 
     :param x: numpy array to which clahe is applied
-    :param kernel_size: tuple of kernel sizes, 1/8 of dimension lengths of x if None
+    :param kernel_size: tuple of kernel sizes, dimension lengths of x if None
     :param n_bins: number of bins to be used in the histogram
     :param clip_limit: relative intensity limit to be ignored in the histogram equalization
     :param adaptive_hist_range: flag, if true individual range for histogram computation of each block is used
