@@ -157,7 +157,7 @@ class Upsample(nn.Module):
         # Pass the concatenated feature maps through the final layer to get the saliency map
         saliency_map = self.final(concatenated)
 
-        # Apply the Gaussian blur to the saliency map
+
         #saliency_map = self.gaussian_blur(saliency_map)
         return saliency_map
 
