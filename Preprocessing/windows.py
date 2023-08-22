@@ -1,6 +1,6 @@
 # Emile Aydar
 # Fiber Detection in Cold-Plasma treated lung tumors
-# LPP/LIP6 || Ecole Polytechnique/Sorbonne Université, 2023
+# LPP/ISIR || Ecole Polytechnique/Sorbonne Université, 2023
 
 # Credits : Code inspired and modified from https://github.com/scikit-image/scikit-image/blob/main/skimage/util/shape.py
 # Copyright (C) 2011, the scikit-image team All rights reserved.
