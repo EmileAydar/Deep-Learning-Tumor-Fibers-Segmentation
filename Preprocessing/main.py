@@ -1,6 +1,6 @@
 # Emile Aydar
 # Fiber Detection in Cold-Plasma treated lung tumors
-# LPP/LIP6 || Ecole Polytechnique/Sorbonne Université, 2023
+# LPP/ISIR || Ecole Polytechnique/Sorbonne Université, 2023
 
 # Tridimensional CLAHE processing technique for 3D tiff stacks
 
