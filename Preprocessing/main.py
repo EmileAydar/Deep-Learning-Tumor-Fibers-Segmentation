@@ -35,7 +35,7 @@ def equalize_3d_histogram(volume, clip_limit):
         hist[i] = min(hist[i], actual_clip_limit)
     excess -= len(hist) * avg_inc
     for i in range(excess):
-        hist[i % len(hist)] += 1  # redistribute as evenly as possible
+        hist[i % len(hist)] += 1
 
     cdf = hist.cumsum()
     cdf_normalized = cdf * hist.max() / cdf.max()
