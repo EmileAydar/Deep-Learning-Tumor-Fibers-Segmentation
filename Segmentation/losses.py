@@ -1,3 +1,8 @@
+# Emile Aydar
+# Fiber Detection in Cold-Plasma treated lung tumors
+# LPP/ISIR || Ecole Polytechnique/Sorbonne Université, 2023
+
+# Dice Loss function and some other useful segmentation metrics
 
 def dice_loss(y_true, y_pred, smooth=1):
     intersection = (y_true * y_pred).sum()
