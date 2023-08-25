@@ -1,3 +1,9 @@
+# Emile Aydar
+# Fiber Detection in Cold-Plasma treated lung tumors
+# LPP/ISIR || Ecole Polytechnique/Sorbonne Université, 2023
+
+# Segmentation neural networks for bidimensional and tridimensional images
+
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
