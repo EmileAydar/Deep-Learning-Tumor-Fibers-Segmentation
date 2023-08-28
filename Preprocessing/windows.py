@@ -5,7 +5,6 @@
 # Credits : Code inspired and modified from https://github.com/scikit-image/scikit-image/blob/main/skimage/util/shape.py
 # Copyright (C) 2011, the scikit-image team All rights reserved.
 
-
 # Construction of a 3D sliding window for Tridimensional CLAHE
 
 import numpy as np
