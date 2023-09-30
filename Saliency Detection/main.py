@@ -1,4 +1,8 @@
+# Emile Aydar
+# Fiber Detection in Cold-Plasma treated lung tumors
+# LPP/ISIR || Ecole Polytechnique/Sorbonne Université, 2023
 
+# VGG-19bn-backboned neural network for image saliency detection 
 
 import os
 import glob
@@ -10,10 +14,10 @@ from PIL import Image
 import tifffile as tiff
 import numpy as np
 
-##########################################################GPU SETTER###########################################################
+##########################################################GPU SETTER##########################################################
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
-#################################SALIENCY DETECTION WITH VGG-19BN BACKBONED NEURAL NETWORK#####################################
+#################################SALIENCY DETECTION WITH VGG-19BN BACKBONED NEURAL NETWORK####################################
 class VGG(nn.Module):
     def __init__(self):
         super(VGG, self).__init__()
@@ -148,7 +152,7 @@ class Upsample(nn.Module):
         #saliency_map = self.gaussian_blur(saliency_map)
         return saliency_map
 
-#########################################AUTOCROPPING##########################################################################
+#########################################SALIENCY DETECTION###################################################################
 model = VGG()
 model = model.to(device)
 
