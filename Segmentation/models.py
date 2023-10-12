@@ -98,13 +98,11 @@ class AttentionResUNet(nn.Module):
 
         self.center = ResConvBlock(512, 1024)
 
-        # Attention Blocks
         self.attention_block4 = AttentionBlock(512, 512, 512)
         self.attention_block3 = AttentionBlock(256, 256, 256)
         self.attention_block2 = AttentionBlock(128, 128, 128)
         self.attention_block1 = AttentionBlock(64, 64, 64)
 
-        # Gating Signal
         self.gating_signal4 = GatingSignal(1024, 512)
         self.gating_signal3 = GatingSignal(512, 256)
         self.gating_signal2 = GatingSignal(256, 128)
@@ -125,16 +123,13 @@ class AttentionResUNet(nn.Module):
         self.final = nn.Conv2d(64, output_channels, kernel_size=1)
 
     def forward(self, x):
-        # Encoder
         e1 = self.encoder1(x)
         e2 = self.encoder2(self.pool1(e1))
         e3 = self.encoder3(self.pool2(e2))
         e4 = self.encoder4(self.pool3(e3))
 
-        # Center
         c = self.center(self.pool4(e4))
 
-        # Decoder with Attention Blocks
         g4 = self.gating_signal4(c)
         a4 = self.attention_block4(e4, g4)
         d4 = self.up4(c)
@@ -255,13 +250,11 @@ class ThreeDAttentionResUNet(nn.Module):
 
         self.center = ThreeDResConvBlock(512, 1024)
 
-        # Attention Blocks
         self.attention_block4 = ThreeDAttentionBlock(512, 512, 512)
         self.attention_block3 = ThreeDAttentionBlock(256, 256, 256)
         self.attention_block2 = ThreeDAttentionBlock(128, 128, 128)
         self.attention_block1 = ThreeDAttentionBlock(64, 64, 64)
 
-        # Gating Signal
         self.gating_signal4 = ThreeDGatingSignal(1024, 512)
         self.gating_signal3 = ThreeDGatingSignal(512, 256)
         self.gating_signal2 = ThreeDGatingSignal(256, 128)
@@ -282,16 +275,13 @@ class ThreeDAttentionResUNet(nn.Module):
         self.final = nn.Conv3d(64, output_channels, kernel_size=1)
 
     def forward(self, x):
-        # Encoder
         e1 = self.encoder1(x)
         e2 = self.encoder2(self.pool1(e1))
         e3 = self.encoder3(self.pool2(e2))
         e4 = self.encoder4(self.pool3(e3))
 
-        # Center
         c = self.center(self.pool4(e4))
 
-        # Decoder with Attention Blocks
         g4 = self.gating_signal4(c)
         a4 = self.attention_block4(e4, g4)
         d4 = self.up4(c)
@@ -317,7 +307,6 @@ class ThreeDAttentionResUNet(nn.Module):
         d1 = torch.cat((a1, d1), dim=1)
         d1 = self.decoder1(d1)
 
-        # Final layer
         out = self.final(d1)
         return torch.sigmoid(out)
 
