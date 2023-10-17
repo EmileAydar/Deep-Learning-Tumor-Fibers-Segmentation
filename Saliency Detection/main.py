@@ -174,7 +174,6 @@ if not os.path.exists(saliency_folder):
     os.makedirs(saliency_folder)
 
 for filepath in glob.glob(os.path.join(folder, '*.tif')):
-    # Load the 3D tiff stack
     stack = tiff.imread(filepath)
 
     saliency_maps = []
