@@ -4,6 +4,9 @@ from tifffile import imread, imwrite
 from skimage.measure import label, regionprops
 from scipy.ndimage import binary_fill_holes
 from skimage.transform import resize
+from PIL import Image
+
+
 # Read the 5D TIFF
 og_image = imread('C:\\Users\\aydar\\Desktop\\Tumor_Control7B_ech13_adj.tif')
 saliency_map_5d = imread('C:\\Users\\aydar\\Desktop\\Tumor_Control7B_ech13_adj_saliency.tif')
@@ -68,11 +71,6 @@ for i in range(saliency_map_5d.shape[0]):
 # now mask_5d is a 5D mask with filled ROI
 # save 5D mask to a new TIFF file
 #imwrite('filled_roi1.tiff', mask_5d)
-
-
-from PIL import Image
-
-
 # empty array for the resized images
 og_image_resized = np.empty((og_image.shape[0], mask_5d.shape[3], mask_5d.shape[4]))
 
