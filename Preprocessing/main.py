@@ -55,7 +55,7 @@ def normalize_image(image):
     return normalized
 
 
-def apply_clahe_to_3d_stack_with_interpolation(tiff_path, window_shape, step=1, clip_limit=0.01,
+def 3d_clahe(tiff_path, window_shape, step=1, clip_limit=0.01,
                                                save_path='3d_clahe_output.tif', debug=False):
     """
     Enhance the contrast of a 3D TIFF stack using CLAHE (Contrast Limited Adaptive Histogram Equalization).
@@ -135,6 +135,6 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
 
-    apply_clahe_to_3d_stack_with_interpolation(args.tiff_path, tuple(args.window_shape), args.step, args.clip_limit,
+    3d_clahe(args.tiff_path, tuple(args.window_shape), args.step, args.clip_limit,
                                                args.save_path,
                                                args.debug)
