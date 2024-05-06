@@ -91,10 +91,7 @@ def 3d_clahe(tiff_path, window_shape, step=1, clip_limit=0.01,
     for index in np.ndindex(windows.shape[:3]):
         window = windows[index+(slice(None), slice(None), slice(None))]
 
-        # Normalize the window
         window = normalize_image(window)
-
-        # Apply true 3D histogram equalization to the entire window
         window = equalize_3d_histogram(window,clip_limit)
 
         x_start = index[0] * step
