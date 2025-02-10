@@ -1,9 +1,6 @@
 # Deep-Learning-Tumor-Fibers-Segmentation
 
 Codes are posted as they are, not cleaned yet, and there are still some models' codes that are being worked on.
-Currently working on it, will update asap.
-Keep Calm.
-Stay Tuned.
 
 All the codes are written under PyTorch framework, and are designed for one or more GPUs acceleration.
 
