@@ -8,8 +8,8 @@ from PIL import Image
 
 
 # 5D TIFF
-og_image = imread('C:\\Users\\aydar\\Desktop\\Tumor_Control7B_ech13_adj.tif')
-saliency_map_5d = imread('C:\\Users\\aydar\\Desktop\\Tumor_Control7B_ech13_adj_saliency.tif')
+og_image = imread('Tumor_Control7B_ech13_adj.tif') # replace by your own path or filename
+saliency_map_5d = imread('Tumor_Control7B_ech13_adj_saliency.tif') # replace by your own path or filename
 saliency_map_5d = saliency_map_5d.astype(np.float32, copy=False)
 
 print(saliency_map_5d.shape)  # Should print: (slices number, 1, 1, 224, 224)
